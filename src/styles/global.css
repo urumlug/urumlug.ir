@@ -4,9 +4,14 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 
+
+.header-logo {
+	width: 50px;
+	height: 70px;
+}
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
+    --accent: #f4c20d; /* Logo yellow */
+    --accent-dark: #c79500; /* Darker yellow for hover */
 	--black: 15, 18, 25;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
@@ -30,8 +35,29 @@
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+    font-family: "Vazirmatn UI";
+    src: url("/fonts/Vazirmatn-UI-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Vazirmatn UI";
+    src: url("/fonts/Vazirmatn-UI-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Vazirmatn UI";
+    src: url("/fonts/Vazirmatn-UI-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 body {
-	font-family: "Atkinson", sans-serif;
+	font-family: "Vazirmatn UI", "Atkinson", sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;

@@ -3,47 +3,132 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import logo from '../assets/logo.png';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="rtl">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
+		<div class="home-banner" role="region" aria-label="Home announcement banner">
+			<div class="banner-content">
+				<div class="banner-text">
+					<strong class="typing">به {SITE_TITLE} خوش آمدید...</strong>
+				</div>
+			</div>
+			<div class="banner-buttons">
+				<a href="/blog" class="banner-btn">بلاگ</a>
+				<a href="/presentations" class="banner-btn">اسلاید ها</a>
+			</div>
+		</div>
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.home-banner {
+		background: #241F31;
+		color: #fff;
+		padding: 2rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	
+	.banner-content {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	
+	.home-banner-logo {
+		width: 60px;
+		height: 60px;
+		object-fit: contain;
+	}
+	
+	.banner-text strong {
+		display: block;
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+	
+	.banner-text p {
+		margin: 0;
+		font-size: 1rem;
+		opacity: 0.8;
+	}
+	
+	.banner-buttons {
+		display: flex;
+		gap: 1rem;
+	}
+	
+	.banner-btn {
+		background: var(--accent);
+		color: #000;
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		border-radius: 4px;
+		font-weight: bold;
+		transition: all 0.2s ease;
+	}
+	
+	.banner-btn:hover {
+		background: var(--accent-dark);
+		transform: translateY(-2px);
+	}
+	
+	@media (max-width: 768px) {
+		.home-banner {
+			flex-direction: column;
+			text-align: center;
+			gap: 1.5rem;
+		}
+		
+		.banner-content {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+		
+		.banner-buttons {
+			flex-direction: column;
+			width: 100%;
+		}
+		
+		.banner-btn {
+			text-align: center;
+		}
+	}
+
+.typing {
+  font-family: 'Vazirmatn UI', Consolas, monospace;
+	font-size: 6vw;
+	color: #d7b94c;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  border-left: 2px solid white;
+  animation: typing 3s steps(20) forwards, blink 1s infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  0%, 50% { border-left-color: white }
+  51%, 100% { border-left-color: transparent }
+}
+
+</style>
