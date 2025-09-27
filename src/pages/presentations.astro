@@ -1,0 +1,201 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<BaseHead title={`ارائه ها - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="presentations-section">
+				<h1>ارائه ها و اسلایدها</h1>
+				<p class="section-description">مجموعه‌ای از ارائه‌ها و اسلایدهای آموزشی در زمینه برنامه‌نویسی و فناوری</p>
+				
+				<div class="presentations-grid">
+					<div class="presentation-card">
+						<div class="presentation-image">
+							<div class="placeholder-image">📊</div>
+						</div>
+						<div class="presentation-content">
+							<h3>مقدمه‌ای بر React</h3>
+							<p>آشنایی با مفاهیم پایه React و نحوه ساخت کامپوننت‌ها</p>
+							<div class="presentation-meta">
+								<span class="date">آذر ۱۴۰۴</span>
+								<span class="category">Frontend</span>
+							</div>
+							<a href="#" class="presentation-link">مشاهده اسلایدها</a>
+						</div>
+					</div>
+
+					<div class="presentation-card">
+						<div class="presentation-image">
+							<div class="placeholder-image">⚡</div>
+						</div>
+						<div class="presentation-content">
+							<h3>بهینه‌سازی عملکرد وب</h3>
+							<p>راهکارهای عملی برای بهبود سرعت و عملکرد وب‌سایت‌ها</p>
+							<div class="presentation-meta">
+								<span class="date">آبان ۱۴۰۴</span>
+								<span class="category">Performance</span>
+							</div>
+							<a href="#" class="presentation-link">مشاهده اسلایدها</a>
+						</div>
+					</div>
+
+					<div class="presentation-card">
+						<div class="presentation-image">
+							<div class="placeholder-image">🔧</div>
+						</div>
+						<div class="presentation-content">
+							<h3>Git و GitHub</h3>
+							<p>مدیریت نسخه و همکاری در پروژه‌های نرم‌افزاری</p>
+							<div class="presentation-meta">
+								<span class="date">مهر ۱۴۰۴</span>
+								<span class="category">Tools</span>
+							</div>
+							<a href="#" class="presentation-link">مشاهده اسلایدها</a>
+						</div>
+					</div>
+
+					<div class="presentation-card">
+						<div class="presentation-image">
+							<div class="placeholder-image">🚀</div>
+						</div>
+						<div class="presentation-content">
+							<h3>Astro Framework</h3>
+							<p>ساخت وب‌سایت‌های سریع با Astro و مفاهیم Static Site Generation</p>
+							<div class="presentation-meta">
+								<span class="date">شهریور ۱۴۰۴</span>
+								<span class="category">Framework</span>
+							</div>
+							<a href="#" class="presentation-link">مشاهده اسلایدها</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.presentations-section h1 {
+		font-size: 2.5rem;
+		color: rgb(var(--black));
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.section-description {
+		text-align: center;
+		color: rgb(var(--gray));
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.presentations-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.presentation-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+		overflow: hidden;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.presentation-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--box-shadow);
+	}
+
+	.presentation-image {
+		height: 200px;
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.placeholder-image {
+		font-size: 4rem;
+		opacity: 0.8;
+	}
+
+	.presentation-content {
+		padding: 1.5rem;
+	}
+
+	.presentation-content h3 {
+		margin: 0 0 0.5rem 0;
+		color: rgb(var(--black));
+		font-size: 1.25rem;
+	}
+
+	.presentation-content p {
+		color: rgb(var(--gray));
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+	}
+
+	.presentation-meta {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.presentation-meta .date,
+	.presentation-meta .category {
+		background: rgb(var(--gray-light));
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.875rem;
+		color: rgb(var(--gray-dark));
+	}
+
+	.presentation-link {
+		display: inline-block;
+		background: var(--accent);
+		color: #000;
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: bold;
+		transition: background 0.2s ease;
+	}
+
+	.presentation-link:hover {
+		background: var(--accent-dark);
+	}
+
+	@media (max-width: 768px) {
+		.presentations-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.presentations-section h1 {
+			font-size: 2rem;
+		}
+
+		.presentation-content {
+			padding: 1rem;
+		}
+	}
+</style>
