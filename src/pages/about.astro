@@ -1,63 +1,279 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<BaseHead title={`درباره ما - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="about-section">
+				<h1>درباره ما</h1>
+				<div class="about-content">
+					<div class="about-intro">
+						<h2>لاگ برنامه‌نویسی ارومیه</h2>
+						<p>
+							ما یک جامعه فعال از برنامه‌نویسان و توسعه‌دهندگان در ارومیه هستیم که با هدف 
+							اشتراک‌گذاری دانش، تجربه و نوآوری در زمینه فناوری گرد هم آمده‌ایم.
+						</p>
+					</div>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+					<div class="mission-vision">
+						<div class="mission">
+							<h3>ماموریت ما</h3>
+							<p>
+								ایجاد فضایی برای یادگیری، همکاری و رشد در زمینه برنامه‌نویسی و فناوری. 
+								ما معتقدیم که اشتراک دانش و تجربه، کلید پیشرفت جامعه فناوری است.
+							</p>
+						</div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+						<div class="vision">
+							<h3>چشم‌انداز ما</h3>
+							<p>
+								تبدیل شدن به مرکز اصلی رویدادهای فناوری در شمال غرب ایران و 
+								ایجاد پل ارتباطی بین برنامه‌نویسان و شرکت‌های فناوری.
+							</p>
+						</div>
+					</div>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+					<div class="activities">
+						<h3>فعالیت‌های ما</h3>
+						<div class="activities-grid">
+							<div class="activity-item">
+								<div class="activity-icon">🎓</div>
+								<h4>کارگاه‌های آموزشی</h4>
+								<p>برگزاری کارگاه‌های عملی در زمینه‌های مختلف برنامه‌نویسی</p>
+							</div>
+							<div class="activity-item">
+								<div class="activity-icon">💬</div>
+								<h4>جلسات بحث و گفتگو</h4>
+								<p>بررسی آخرین روندها و تکنولوژی‌های روز دنیا</p>
+							</div>
+							<div class="activity-item">
+								<div class="activity-icon">🤝</div>
+								<h4>شبکه‌سازی</h4>
+								<p>ایجاد ارتباط بین برنامه‌نویسان و فرصت‌های شغلی</p>
+							</div>
+							<div class="activity-item">
+								<div class="activity-icon">🚀</div>
+								<h4>پروژه‌های مشترک</h4>
+								<p>همکاری در پروژه‌های متن‌باز و نوآورانه</p>
+							</div>
+						</div>
+					</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<div class="join-us">
+						<h3>به ما بپیوندید</h3>
+						<p>
+							اگر شما هم علاقه‌مند به برنامه‌نویسی و فناوری هستید، 
+							به خانواده بزرگ ما بپیوندید و در رویدادهای ما شرکت کنید.
+						</p>
+						<div class="join-actions">
+							<a href="/events" class="join-btn primary">مشاهده رویدادها</a>
+							<a href="/contact" class="join-btn secondary">تماس با ما</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.about-section h1 {
+		font-size: 2.5rem;
+		color: var(--primary-dark);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.about-content {
+		line-height: 1.8;
+	}
+
+	.about-intro {
+		text-align: center;
+		margin-bottom: 3rem;
+		padding: 2rem;
+		background: linear-gradient(135deg, var(--primary-dark), #1a1a1a);
+		color: white;
+		border-radius: 12px;
+	}
+
+	.about-intro h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--accent);
+	}
+
+	.about-intro p {
+		font-size: 1.1rem;
+		opacity: 0.9;
+	}
+
+	.mission-vision {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.mission,
+	.vision {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+	}
+
+	.mission h3,
+	.vision h3 {
+		color: var(--primary-dark);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.activities {
+		margin-bottom: 3rem;
+	}
+
+	.activities h3 {
+		font-size: 2rem;
+		color: var(--primary-dark);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.activities-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.activity-item {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+		text-align: center;
+		transition: transform 0.2s ease;
+	}
+
+	.activity-item:hover {
+		transform: translateY(-4px);
+	}
+
+	.activity-icon {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.activity-item h4 {
+		color: var(--primary-dark);
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.activity-item p {
+		color: rgb(var(--gray));
+		font-size: 0.95rem;
+	}
+
+	.join-us {
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		color: var(--primary-dark);
+		padding: 3rem 2rem;
+		border-radius: 12px;
+		text-align: center;
+	}
+
+	.join-us h3 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.join-us p {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		opacity: 0.9;
+	}
+
+	.join-actions {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.join-btn {
+		padding: 1rem 2rem;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: bold;
+		font-size: 1.1rem;
+		transition: all 0.2s ease;
+	}
+
+	.join-btn.primary {
+		background: var(--primary-dark);
+		color: white;
+	}
+
+	.join-btn.primary:hover {
+		background: #1a1a1a;
+		transform: translateY(-2px);
+	}
+
+	.join-btn.secondary {
+		background: transparent;
+		color: var(--primary-dark);
+		border: 2px solid var(--primary-dark);
+	}
+
+	.join-btn.secondary:hover {
+		background: var(--primary-dark);
+		color: white;
+	}
+
+	@media (max-width: 768px) {
+		.about-section h1 {
+			font-size: 2rem;
+		}
+
+		.about-intro h2 {
+			font-size: 1.5rem;
+		}
+
+		.mission-vision {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		.activities-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.join-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.join-btn {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+</style>

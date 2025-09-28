@@ -3,132 +3,292 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import logo from '../assets/logo.png';
 ---
 
 <!doctype html>
-<html lang="en" dir="rtl">
+<html lang="fa" dir="rtl">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
 		<Header />
-		<div class="home-banner" role="region" aria-label="Home announcement banner">
-			<div class="banner-content">
-				<div class="banner-text">
-					<strong class="typing">به {SITE_TITLE} خوش آمدید...</strong>
-				</div>
-			</div>
-			<div class="banner-buttons">
-				<a href="/blog" class="banner-btn">بلاگ</a>
-				<a href="/presentations" class="banner-btn">اسلاید ها</a>
-			</div>
-		</div>
 		<main>
-			
+			<section class="hero-section">
+				<div class="hero-content">
+					<h1 class="hero-title">رویدادهای برنامه‌نویسی ارومیه</h1>
+					<p class="hero-description">
+						بهترین رویدادهای فناوری و برنامه‌نویسی در ارومیه را در اینجا پیدا کنید. 
+						از کارگاه‌های آموزشی تا کنفرانس‌های بزرگ، همه چیز در یک مکان.
+					</p>
+					<div class="hero-actions">
+						<a href="/events" class="cta-primary">مشاهده رویدادها</a>
+						<a href="/about" class="cta-secondary">درباره ما</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="featured-events">
+				<h2>رویدادهای ویژه</h2>
+				<div class="events-grid">
+					<article class="event-card featured">
+						<div class="event-image">
+							<div class="event-placeholder">🚀</div>
+						</div>
+						<div class="event-content">
+							<h3>کارگاه React پیشرفته</h3>
+							<p>آموزش مفاهیم پیشرفته React و بهترین practices در توسعه وب</p>
+							<div class="event-meta">
+								<span class="event-date">۱۵ آذر ۱۴۰۴</span>
+								<span class="event-location">ارومیه</span>
+							</div>
+							<a href="#" class="event-link">جزئیات بیشتر</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">⚡</div>
+						</div>
+						<div class="event-content">
+							<h3>بهینه‌سازی عملکرد وب</h3>
+							<p>راهکارهای عملی برای بهبود سرعت وب‌سایت‌ها</p>
+							<div class="event-meta">
+								<span class="event-date">۲۲ آذر ۱۴۰۴</span>
+								<span class="event-location">ارومیه</span>
+							</div>
+							<a href="#" class="event-link">جزئیات بیشتر</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">🔧</div>
+						</div>
+						<div class="event-content">
+							<h3>Git و GitHub</h3>
+							<p>مدیریت نسخه و همکاری در پروژه‌های نرم‌افزاری</p>
+							<div class="event-meta">
+								<span class="event-date">۲۹ آذر ۱۴۰۴</span>
+								<span class="event-location">ارومیه</span>
+							</div>
+							<a href="#" class="event-link">جزئیات بیشتر</a>
+						</div>
+					</article>
+				</div>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
-	.home-banner {
-		background: #241F31;
-		color: #fff;
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
 		padding: 2rem 1rem;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 2rem;
-		width: 100%;
-		box-sizing: border-box;
 	}
-	
-	.banner-content {
+
+	.hero-section {
+		text-align: center;
+		padding: 4rem 0;
+		background: linear-gradient(135deg, var(--primary-dark), #1a1a1a);
+		color: white;
+		border-radius: 12px;
+		margin-bottom: 3rem;
+	}
+
+	.hero-content {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.hero-title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		line-height: 1.2;
+		color: var(--accent);
+	}
+
+	.hero-description {
+		font-size: 1.25rem;
+		margin-bottom: 2.5rem;
+		opacity: 0.9;
+		line-height: 1.6;
+	}
+
+	.hero-actions {
 		display: flex;
-		align-items: center;
 		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
 	}
-	
-	.home-banner-logo {
-		width: 60px;
-		height: 60px;
-		object-fit: contain;
-	}
-	
-	.banner-text strong {
-		display: block;
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
-	}
-	
-	.banner-text p {
-		margin: 0;
-		font-size: 1rem;
-		opacity: 0.8;
-	}
-	
-	.banner-buttons {
-		display: flex;
-		gap: 1rem;
-	}
-	
-	.banner-btn {
+
+	.cta-primary {
 		background: var(--accent);
-		color: #000;
-		padding: 0.75rem 1.5rem;
+		color: var(--primary-dark);
+		padding: 1rem 2rem;
 		text-decoration: none;
-		border-radius: 4px;
+		border-radius: 8px;
 		font-weight: bold;
+		font-size: 1.1rem;
 		transition: all 0.2s ease;
 	}
-	
-	.banner-btn:hover {
+
+	.cta-primary:hover {
 		background: var(--accent-dark);
 		transform: translateY(-2px);
 	}
-	
-	@media (max-width: 768px) {
-		.home-banner {
-			flex-direction: column;
-			text-align: center;
-			gap: 1.5rem;
-		}
-		
-		.banner-content {
-			flex-direction: column;
-			gap: 0.5rem;
-		}
-		
-		.banner-buttons {
-			flex-direction: column;
-			width: 100%;
-		}
-		
-		.banner-btn {
-			text-align: center;
-		}
+
+	.cta-secondary {
+		background: transparent;
+		color: white;
+		padding: 1rem 2rem;
+		text-decoration: none;
+		border: 2px solid white;
+		border-radius: 8px;
+		font-weight: bold;
+		font-size: 1.1rem;
+		transition: all 0.2s ease;
 	}
 
-.typing {
-  font-family: 'Vazirmatn UI', Consolas, monospace;
-	font-size: 6vw;
-	color: #d7b94c;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  border-left: 2px solid white;
-  animation: typing 3s steps(20) forwards, blink 1s infinite;
-}
+	.cta-secondary:hover {
+		background: white;
+		color: var(--primary-dark);
+	}
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+	.featured-events h2 {
+		font-size: 2.5rem;
+		text-align: center;
+		margin-bottom: 3rem;
+		color: var(--primary-dark);
+	}
 
-@keyframes blink {
-  0%, 50% { border-left-color: white }
-  51%, 100% { border-left-color: transparent }
-}
+	.events-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+	}
 
+	.event-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+		overflow: hidden;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.event-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--box-shadow);
+	}
+
+	.event-card.featured {
+		grid-column: 1 / -1;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+
+	.event-image {
+		height: 200px;
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.event-card.featured .event-image {
+		height: 300px;
+	}
+
+	.event-placeholder {
+		font-size: 4rem;
+		opacity: 0.8;
+	}
+
+	.event-content {
+		padding: 1.5rem;
+	}
+
+	.event-content h3 {
+		margin: 0 0 0.5rem 0;
+		color: var(--primary-dark);
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	.event-card.featured .event-content h3 {
+		font-size: 2rem;
+	}
+
+	.event-content p {
+		color: rgb(var(--gray));
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+	}
+
+	.event-meta {
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.event-date,
+	.event-location {
+		background: rgb(var(--gray-light));
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		color: var(--primary-dark);
+		font-weight: 500;
+	}
+
+	.event-link {
+		display: inline-block;
+		background: var(--accent);
+		color: var(--primary-dark);
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: bold;
+		transition: background 0.2s ease;
+	}
+
+	.event-link:hover {
+		background: var(--accent-dark);
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
+			font-size: 2.5rem;
+		}
+
+		.hero-description {
+			font-size: 1.1rem;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.events-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.event-card.featured {
+			grid-template-columns: 1fr;
+		}
+
+		.event-card.featured .event-image {
+			height: 200px;
+		}
+
+		.featured-events h2 {
+			font-size: 2rem;
+		}
+	}
 </style>
