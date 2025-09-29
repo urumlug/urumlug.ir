@@ -12,9 +12,10 @@ import logo from '../assets/logo.png';
 		</div>
 		<div class="internal-links" dir="rtl">
 			<HeaderLink href="/">خانه</HeaderLink>
-			<HeaderLink href="/blog">بلاگ</HeaderLink>
+			<HeaderLink href="/events">رویدادها</HeaderLink>
 			<HeaderLink href="/presentations">ارائه ها</HeaderLink>
 			<HeaderLink href="/about">درباره ما</HeaderLink>
+			<HeaderLink href="/contact">تماس</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -39,11 +40,16 @@ import logo from '../assets/logo.png';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		direction: rtl;
 	}
 	.brand {
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		order: 2; /* Logo on the right side in RTL */
+	}
+	.internal-links {
+		order: 1; /* Links on the left side in RTL */
 	}
 	nav a {
 		padding: 1em 0.5em;

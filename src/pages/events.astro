@@ -1,0 +1,265 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<BaseHead title={`رویدادها - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="events-section">
+				<h1>رویدادهای برنامه‌نویسی</h1>
+				<p class="section-description">همه رویدادهای فناوری و برنامه‌نویسی در ارومیه</p>
+				
+				<div class="events-grid">
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">🚀</div>
+						</div>
+						<div class="event-content">
+							<h3>کارگاه React پیشرفته</h3>
+							<p>آموزش مفاهیم پیشرفته React و بهترین practices در توسعه وب. این کارگاه شامل Hooks، Context API، و بهینه‌سازی عملکرد است.</p>
+							<div class="event-meta">
+								<span class="event-date">۱۵ آذر ۱۴۰۴</span>
+								<span class="event-time">۱۴:۰۰ - ۱۸:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">کارگاه</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">⚡</div>
+						</div>
+						<div class="event-content">
+							<h3>بهینه‌سازی عملکرد وب</h3>
+							<p>راهکارهای عملی برای بهبود سرعت و عملکرد وب‌سایت‌ها. شامل Core Web Vitals، lazy loading، و تکنیک‌های پیشرفته بهینه‌سازی.</p>
+							<div class="event-meta">
+								<span class="event-date">۲۲ آذر ۱۴۰۴</span>
+								<span class="event-time">۱۰:۰۰ - ۱۴:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">سمینار</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">🔧</div>
+						</div>
+						<div class="event-content">
+							<h3>Git و GitHub</h3>
+							<p>مدیریت نسخه و همکاری در پروژه‌های نرم‌افزاری. از مفاهیم پایه تا تکنیک‌های پیشرفته Git و GitHub.</p>
+							<div class="event-meta">
+								<span class="event-date">۲۹ آذر ۱۴۰۴</span>
+								<span class="event-time">۱۶:۰۰ - ۲۰:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">کارگاه</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">🎯</div>
+						</div>
+						<div class="event-content">
+							<h3>Node.js و Express</h3>
+							<p>توسعه API و سرور با Node.js و Express. شامل RESTful APIs، middleware، و deployment.</p>
+							<div class="event-meta">
+								<span class="event-date">۶ دی ۱۴۰۴</span>
+								<span class="event-time">۱۴:۰۰ - ۱۸:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">کارگاه</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">💻</div>
+						</div>
+						<div class="event-content">
+							<h3>Python برای مبتدیان</h3>
+							<p>آموزش Python از صفر تا صد. شامل syntax، data structures، و پروژه‌های عملی.</p>
+							<div class="event-meta">
+								<span class="event-date">۱۳ دی ۱۴۰۴</span>
+								<span class="event-time">۱۰:۰۰ - ۱۴:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">کارگاه</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<div class="event-image">
+							<div class="event-placeholder">🌐</div>
+						</div>
+						<div class="event-content">
+							<h3>کنفرانس فناوری ارومیه</h3>
+							<p>بزرگترین کنفرانس فناوری در ارومیه با حضور سخنرانان برجسته و ارائه‌های متنوع در زمینه‌های مختلف فناوری.</p>
+							<div class="event-meta">
+								<span class="event-date">۲۰ دی ۱۴۰۴</span>
+								<span class="event-time">۰۹:۰۰ - ۱۷:۰۰</span>
+								<span class="event-location">ارومیه</span>
+								<span class="event-type">کنفرانس</span>
+							</div>
+							<a href="#" class="event-link">ثبت‌نام</a>
+						</div>
+					</article>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.events-section h1 {
+		font-size: 2.5rem;
+		color: var(--primary-dark);
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.section-description {
+		text-align: center;
+		color: rgb(var(--gray));
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.events-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.event-card {
+		background: white;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+		overflow: hidden;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.event-card:hover {
+		transform: translateY(-4px);
+		box-shadow: var(--box-shadow);
+	}
+
+	.event-image {
+		height: 200px;
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.event-placeholder {
+		font-size: 4rem;
+		opacity: 0.8;
+	}
+
+	.event-content {
+		padding: 1.5rem;
+	}
+
+	.event-content h3 {
+		margin: 0 0 0.5rem 0;
+		color: var(--primary-dark);
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.event-content p {
+		color: rgb(var(--gray));
+		margin: 0 0 1rem 0;
+		line-height: 1.6;
+	}
+
+	.event-meta {
+		display: flex;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.event-date,
+	.event-time,
+	.event-location,
+	.event-type {
+		background: rgb(var(--gray-light));
+		padding: 0.25rem 0.75rem;
+		border-radius: 20px;
+		font-size: 0.875rem;
+		color: var(--primary-dark);
+		font-weight: 500;
+	}
+
+	.event-type {
+		background: var(--accent);
+		color: var(--primary-dark);
+	}
+
+	.event-link {
+		display: inline-block;
+		background: var(--accent);
+		color: var(--primary-dark);
+		padding: 0.75rem 1.5rem;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: bold;
+		transition: background 0.2s ease;
+	}
+
+	.event-link:hover {
+		background: var(--accent-dark);
+	}
+
+	@media (max-width: 768px) {
+		.events-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.events-section h1 {
+			font-size: 2rem;
+		}
+
+		.event-content {
+			padding: 1rem;
+		}
+
+		.event-meta {
+			gap: 0.25rem;
+		}
+
+		.event-date,
+		.event-time,
+		.event-location,
+		.event-type {
+			font-size: 0.8rem;
+			padding: 0.2rem 0.5rem;
+		}
+	}
+</style>

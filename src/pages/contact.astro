@@ -1,0 +1,224 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<BaseHead title={`تماس - ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="contact-section">
+				<h1>تماس با ما</h1>
+				<p class="section-description">ما همیشه مشتاق شنیدن نظرات و پیشنهادات شما هستیم</p>
+				
+				<div class="contact-content">
+					<div class="contact-info">
+						<h2>اطلاعات تماس</h2>
+						<div class="info-grid">
+							<div class="info-item">
+								<div class="info-icon">📧</div>
+								<div class="info-content">
+									<h3>ایمیل</h3>
+									<p>info@urumlug.ir</p>
+								</div>
+							</div>
+							<div class="info-item">
+								<div class="info-icon">📱</div>
+								<div class="info-content">
+									<h3>تلگرام</h3>
+									<p>@urumlug</p>
+								</div>
+							</div>
+							<div class="info-item">
+								<div class="info-icon">📍</div>
+								<div class="info-content">
+									<h3>آدرس</h3>
+									<p>ارومیه، ایران</p>
+								</div>
+							</div>
+							<div class="info-item">
+								<div class="info-icon">🕒</div>
+								<div class="info-content">
+									<h3>ساعات پاسخگویی</h3>
+									<p>شنبه تا پنج‌شنبه: ۹:۰۰ - ۱۸:۰۰</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="social-links">
+					<h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
+					<div class="social-grid">
+						<a href="#" class="social-link">
+							<div class="social-icon">📱</div>
+							<span>تلگرام</span>
+						</a>
+						<a href="#" class="social-link">
+							<div class="social-icon">📘</div>
+							<span>فیس‌بوک</span>
+						</a>
+						<a href="#" class="social-link">
+							<div class="social-icon">🐦</div>
+							<span>توییتر</span>
+						</a>
+						<a href="#" class="social-link">
+							<div class="social-icon">💼</div>
+							<span>لینکدین</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
+	}
+
+	.contact-section h1 {
+		font-size: 2.5rem;
+		color: var(--primary-dark);
+		margin-bottom: 1rem;
+		text-align: center;
+	}
+
+	.section-description {
+		text-align: center;
+		color: rgb(var(--gray));
+		margin-bottom: 3rem;
+		font-size: 1.1rem;
+	}
+
+	.contact-content {
+		margin-bottom: 3rem;
+	}
+
+	.contact-info h2 {
+		font-size: 1.8rem;
+		color: var(--primary-dark);
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.info-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		background: white;
+		padding: 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 4px 6px rgba(var(--black), 10%);
+		transition: transform 0.2s ease;
+	}
+
+	.info-item:hover {
+		transform: translateY(-2px);
+	}
+
+	.info-icon {
+		font-size: 2rem;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--accent);
+		border-radius: 50%;
+	}
+
+	.info-content h3 {
+		color: var(--primary-dark);
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	.info-content p {
+		color: rgb(var(--gray));
+		margin: 0;
+	}
+
+
+	.social-links {
+		text-align: center;
+		background: linear-gradient(135deg, var(--primary-dark), #1a1a1a);
+		color: white;
+		padding: 3rem 2rem;
+		border-radius: 12px;
+	}
+
+	.social-links h2 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+		color: var(--accent);
+	}
+
+	.social-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.social-link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		text-decoration: none;
+		color: white;
+		transition: all 0.2s ease;
+	}
+
+	.social-link:hover {
+		background: var(--accent);
+		color: var(--primary-dark);
+		transform: translateY(-2px);
+	}
+
+	.social-icon {
+		font-size: 2rem;
+	}
+
+	.social-link span {
+		font-weight: 600;
+	}
+
+	@media (max-width: 768px) {
+		.contact-section h1 {
+			font-size: 2rem;
+		}
+
+		.info-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.info-item {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.social-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+</style>
