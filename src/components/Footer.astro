@@ -4,162 +4,21 @@ const today = new Date();
 ---
 
 <footer>
-	<div class="footer-content">
-		<div class="footer-info">
-			<h3>{SITE_TITLE}</h3>
-			<p>لاگ برنامه‌نویسی ارومیه - جامعه فعال توسعه‌دهندگان</p>
-		</div>
-		
-		<div class="footer-links">
-			<div class="link-group">
-				<h4>صفحات</h4>
-				<a href="/">خانه</a>
-				<a href="/events">رویدادها</a>
-				<a href="/presentations">ارائه‌ها</a>
-				<a href="/about">درباره ما</a>
-				<a href="/contact">تماس</a>
-			</div>
-			
-			<div class="link-group">
-				<h4>لینک‌های مفید</h4>
-				<a href="/rss.xml">خوراک RSS</a>
-				<a href="/sitemap-index.xml">نقشه سایت</a>
-			</div>
-		</div>
-		
-		<div class="social-links">
-			<h4>شبکه‌های اجتماعی</h4>
-			<div class="social-icons">
-				<a href="#" target="_blank" aria-label="تلگرام">
-					<span class="social-icon">📱</span>
-				</a>
-				<a href="#" target="_blank" aria-label="فیس‌بوک">
-					<span class="social-icon">📘</span>
-				</a>
-				<a href="#" target="_blank" aria-label="توییتر">
-					<span class="social-icon">🐦</span>
-				</a>
-				<a href="#" target="_blank" aria-label="لینکدین">
-					<span class="social-icon">💼</span>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	<div class="footer-bottom">
-		<p>&copy; {today.getFullYear()} {SITE_TITLE}. تمامی حقوق محفوظ است.</p>
-	</div>
+	<p class="footer-minimal">© {today.getFullYear()} {SITE_TITLE}</p>
 </footer>
 <style>
 	footer {
-		background: var(--primary-dark);
-		color: white;
-		padding: 3rem 1rem 1rem 1rem;
-		margin-top: 4rem;
+		background: transparent;
+		color: var(--primary-dark);
+		padding: 0.75rem 1rem;
+		margin-top: 1.5rem;
 	}
 
-	.footer-content {
+	.footer-minimal {
 		max-width: 1200px;
 		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr 2fr 1fr;
-		gap: 3rem;
-		align-items: start;
-	}
-
-	.footer-info h3 {
-		color: var(--accent);
-		margin-bottom: 1rem;
-		font-size: 1.5rem;
-	}
-
-	.footer-info p {
-		color: rgba(255, 255, 255, 0.8);
-		line-height: 1.6;
-	}
-
-	.footer-links {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
-	}
-
-	.link-group h4 {
-		color: var(--accent);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.link-group a {
-		display: block;
-		color: rgba(255, 255, 255, 0.8);
-		text-decoration: none;
-		margin-bottom: 0.5rem;
-		transition: color 0.2s ease;
-	}
-
-	.link-group a:hover {
-		color: var(--accent);
-	}
-
-	.social-links h4 {
-		color: var(--accent);
-		margin-bottom: 1rem;
-		font-size: 1.1rem;
-	}
-
-	.social-icons {
-		display: flex;
-		gap: 1rem;
-	}
-
-	.social-icons a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 50px;
-		height: 50px;
-		background: rgba(255, 255, 255, 0.1);
-		border-radius: 50%;
-		text-decoration: none;
-		transition: all 0.2s ease;
-	}
-
-	.social-icons a:hover {
-		background: var(--accent);
-		transform: translateY(-2px);
-	}
-
-	.social-icon {
-		font-size: 1.5rem;
-	}
-
-	.footer-bottom {
-		border-top: 1px solid rgba(255, 255, 255, 0.1);
-		margin-top: 2rem;
-		padding-top: 2rem;
 		text-align: center;
-	}
-
-	.footer-bottom p {
-		color: rgba(255, 255, 255, 0.6);
-		margin: 0;
-	}
-
-	@media (max-width: 768px) {
-		.footer-content {
-			grid-template-columns: 1fr;
-			gap: 2rem;
-			text-align: center;
-		}
-
-		.footer-links {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.social-icons {
-			justify-content: center;
-		}
+		font-size: 0.9rem;
+		color: rgba(0, 0, 0, 0.6);
 	}
 </style>
