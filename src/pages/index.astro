@@ -26,66 +26,28 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					</div>
 				</div>
 			</section>
-
-			<section class="featured-events">
-				<h2>رویدادهای ویژه</h2>
-				<div class="events-grid">
-					<article class="event-card featured">
-						<div class="event-image">
-							<div class="event-placeholder">🚀</div>
-						</div>
-						<div class="event-content">
-							<h3>کارگاه React پیشرفته</h3>
-							<p>آموزش مفاهیم پیشرفته React و بهترین practices در توسعه وب</p>
-							<div class="event-meta">
-								<span class="event-date">۱۵ آذر ۱۴۰۴</span>
-								<span class="event-location">ارومیه</span>
-							</div>
-							<a href="#" class="event-link">جزئیات بیشتر</a>
-						</div>
-					</article>
-
-					<article class="event-card">
-						<div class="event-image">
-							<div class="event-placeholder">⚡</div>
-						</div>
-						<div class="event-content">
-							<h3>بهینه‌سازی عملکرد وب</h3>
-							<p>راهکارهای عملی برای بهبود سرعت وب‌سایت‌ها</p>
-							<div class="event-meta">
-								<span class="event-date">۲۲ آذر ۱۴۰۴</span>
-								<span class="event-location">ارومیه</span>
-							</div>
-							<a href="#" class="event-link">جزئیات بیشتر</a>
-						</div>
-					</article>
-
-					<article class="event-card">
-						<div class="event-image">
-							<div class="event-placeholder">🔧</div>
-						</div>
-						<div class="event-content">
-							<h3>Git و GitHub</h3>
-							<p>مدیریت نسخه و همکاری در پروژه‌های نرم‌افزاری</p>
-							<div class="event-meta">
-								<span class="event-date">۲۹ آذر ۱۴۰۴</span>
-								<span class="event-location">ارومیه</span>
-							</div>
-							<a href="#" class="event-link">جزئیات بیشتر</a>
-						</div>
-					</article>
-				</div>
-			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
 
 <style>
+	html, body {
+		height: 100%;
+	}
+
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+	}
 	main {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 2rem 1rem;
+		flex: 1;
+		display: flex;
 	}
 
 	.hero-section {
@@ -94,7 +56,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		background: linear-gradient(135deg, var(--primary-dark), #1a1a1a);
 		color: white;
 		border-radius: 12px;
-		margin-bottom: 3rem;
+		margin-bottom: 0;
+		flex: 1;
+		display: flex;
+		align-items: center;
 	}
 
 	.hero-content {
